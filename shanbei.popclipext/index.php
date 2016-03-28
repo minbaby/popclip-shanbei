@@ -8,7 +8,7 @@ function __($txt) {
 
 $API_SEARCH = "https://api.shanbay.com/bdc/search/?word=%s";
 
-$url = sprintf($API_SEARCH, $_ENV['POPCLIP_TEXT']);
+$url = sprintf($API_SEARCH, getenv('POPCLIP_TEXT'));
 $ret = file_get_contents($url);
 
 if (empty($ret)) {
